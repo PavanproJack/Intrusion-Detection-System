@@ -1,5 +1,7 @@
 import numpy as npy  
 import pandas as pds 
+import matplotlib.pyplot as plt
+from sklearn.cluster import KMeans
 
 dataFrame_1 = pds.read_csv('Dataset_1.csv')  
 
@@ -20,14 +22,38 @@ print(distict_clfs_count)
 #############################################
 
 
-gs = dataFrame_1.groupby('classification').groups
+
+
+def getCount(a):
+    return a.size
+ 
+x = map(lambda x: x.size, gs.values())
+y = gs.keys()
+print(len(y))
+
+#y = map(getCount, gs.values())
+#z = map(getCount, gs.values())
+
+print(list(gs.keys()))
+
+grouped_sIPs = dataFrame_1.groupby('sourceIP').count()
+distict_sIPs_count = grouped_sIPs.shape[0]
+gs = dataFrame_1.groupby('sourceIP').groups
+
+frequency = list(x)
+
+sIPs = list(gs.keys())
+plt.bar(sIPs, frequency)
+plt.xticks(sIPs)
+plt.yticks(frequency) #This may be included or excluded as per need
+plt.xlabel('sIPs')
+plt.ylabel('frequency')
+plt.show()
 
 
 
-
-for value in gs.values():
-    print(value.size)
-    
+''' for value in gs.values():
+    print(value)   '''
 
 
  
