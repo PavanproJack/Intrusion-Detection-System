@@ -1,4 +1,4 @@
-# Intrusion-Detection-Repo
+# Intrusion-Detection-System
 Dataset_1 and Dataset_2 are logfiles from an intrusion detection system (IDS).
 
 Basic Data Processing Analysis and Visualization is done using Python Pandas package. Histograms are generated to visualise the results.
