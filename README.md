@@ -9,5 +9,11 @@ Identified relation between source and destination clusters and illustrated grap
 
 Finally, a decision tree is learnt using the 2 features (i.e. the source cluster and the destination cluster) to predict the classification field. Repeated the same with Dataset_2.
 
+### Execution
+This developed on Jupyter notebook with Python 3.x. Run the DecisionTree.ipynb file using Jupyter notebook. In addition, a python file DecisionTree.py can work outside jupyter notebook. 
+
 ### References: 
 
+
+### Support or Contact
+Happy to support through mail: kavvuripavankumar@gmail.com .............
